@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>SimplyFI | Assignment 2</title>
+</head>
+<body>
+    <div class="question">
+        <b>Qusetion:</b><br/><br/>
+        Your son took a vacation through Europe without telling you.<br/>
+        When the kid returned from the vacation you asked him where did he go.<br/>
+        The kid told you:<br/>
+        Dad I went to these cities:
+        Amsterdam, Kiev, Zurich, Prague, Berlin, Barcelona.<br/><br/>
+        I used only train as transportation and these were the available tickets:<br/>
+        Paris-Skopje, Zurich-Amsterdam, Prague-Zurich, Barcelona-Berlin, Kiev-Prague, Skopje-Paris, Amsterdam-Barcelona, Berlin-Kiev, Berlin-Amsterdam.<br/><br/>
+        You know that your kid started with Kiev.<br/>
+        Write a data structure and algorithm that will give you the route which your son was traveling.<br/><br/>
+    </div>
+    <div><b>Answer:</b></div><br/>
+    <div class="answer"></div><br/><br/>
+    <div class="algorithm">
+        <b>Algorithm:</b>
+        <xmp>
+        let startCity = 'Kiev'
+        let trainTickets = ['Paris-Skopje', 'Zurich-Amsterdam', 'Prague-Zurich', 'Barcelona-Berlin', 'Kiev-Prague', 'Skopje-Paris', 'Amsterdam-Barcelona', 'Berlin-Kiev', 'Berlin-Amsterdam']
+        let citiesVisited = ['Amsterdam', 'Kiev', 'Zurich', 'Prague', 'Berlin', 'Barcelona']
+        let routeTaken=[]
+        for (let i=1; i<citiesVisited.length;i++){
+            if(i==1)
+                routeTaken.push(startCity)
+            else{
+                trainTickets.map(ticket=>{
+                let start=ticket.split('-')[0]
+                let destination=ticket.split('-')[1]
+                if(routeTaken[routeTaken.length-1]===start){
+                    routeTaken.push(destination)
+                    return
+                    }
+                })
+            }
+        }<br/>
+        document.querySelector('.answer').innerText = routeTaken.join(' -> ').toString()
+        </xmp>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

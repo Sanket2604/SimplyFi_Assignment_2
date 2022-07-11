@@ -1,0 +1,25 @@
+Step 1: Start
+Step 2: startCity = 'Kiev'
+Step 3: trainTickets = ['Paris-Skopje', 'Zurich-Amsterdam', 'Prague-Zurich', 'Barcelona-Berlin', 'Kiev-Prague', 'Skopje-Paris', 'Amsterdam-Barcelona', 'Berlin-Kiev', 'Berlin-Amsterdam']
+Step 4: citiesVisited = ['Amsterdam', 'Kiev', 'Zurich', 'Prague', 'Berlin', 'Barcelona']
+step 5: routeTaken=[]
+Step 6: for i=1 to citiesVisited.length
+Step 6.1:   if(i==1)
+Step 6.2:       routeTaken.push(startCity)
+Step 6.3:   else
+Step 6.4:       trainTickets.map(ticket=>{
+Step 6.4.1:         start=ticket.split('-')[0]
+Step 6.4.2:         destination=ticket.split('-')[1]
+Step 6.4.3:         if(routeTaken[routeTaken.length-1]===start)
+Step 6.4.4:             routeTaken.push(destination) 
+Step 6.4.5:             return
+                    End of Step 6.4.3 if statement
+                })    
+            End of Step 6.1 if statement
+        End of Step 6 for statement
+Step 7: Print routeTaken
+Step 8: End
+
+
+'Paris-Skopje', 'Zurich-Amsterdam', 'Prague-Zurich', 'Barcelona-Berlin', 'Kiev-Prague', 'Skopje-Paris', 'Amsterdam-Barcelona', 'Berlin-Kiev', 'Berlin-Amsterdam'
+Answer: Kiev, Prague, Zurich, Amsterdam, Barcelona, Berlin
