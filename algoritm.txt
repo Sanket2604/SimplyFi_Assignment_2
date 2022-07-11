@@ -19,7 +19,3 @@ Step 6.4.5:             return
         End of Step 6 for statement
 Step 7: Print routeTaken
 Step 8: End
-
-
-'Paris-Skopje', 'Zurich-Amsterdam', 'Prague-Zurich', 'Barcelona-Berlin', 'Kiev-Prague', 'Skopje-Paris', 'Amsterdam-Barcelona', 'Berlin-Kiev', 'Berlin-Amsterdam'
-Answer: Kiev, Prague, Zurich, Amsterdam, Barcelona, Berlin

@@ -8,3 +8,9 @@ body b{
 body .question{
     margin-bottom: 10px;
 }
+body .code_snipet{
+    background-color: rgb(39, 40, 34);
+    overflow-wrap: break-word;
+    color: white;
+    padding-bottom: 0px;
+}

@@ -25,9 +25,10 @@
     <div class="answer"></div><br/><br/>
     <div class="algorithm">
         <b>Algorithm:</b>
-        <xmp>
+        <xmp class="code_snipet">
         let startCity = 'Kiev'
-        let trainTickets = ['Paris-Skopje', 'Zurich-Amsterdam', 'Prague-Zurich', 'Barcelona-Berlin', 'Kiev-Prague', 'Skopje-Paris', 'Amsterdam-Barcelona', 'Berlin-Kiev', 'Berlin-Amsterdam']
+        let trainTickets = ['Paris-Skopje', 'Zurich-Amsterdam', 'Prague-Zurich', 'Barcelona-Berlin', 'Kiev-Prague', 
+        'Skopje-Paris', 'Amsterdam-Barcelona', 'Berlin-Kiev', 'Berlin-Amsterdam']
         let citiesVisited = ['Amsterdam', 'Kiev', 'Zurich', 'Prague', 'Berlin', 'Barcelona']
         let routeTaken=[]
         for (let i=1; i<citiesVisited.length;i++){
@@ -43,7 +44,7 @@
                     }
                 })
             }
-        }<br/>
+        }
         document.querySelector('.answer').innerText = routeTaken.join(' -> ').toString()
         </xmp>
     </div>
